@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <link href="css/geral.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Descarte</title>
+    <link rel="website icon" type="png" href="imagens/logo-eco-descarte.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="logo" data-search="eco descarte logo projeto sustentabilidade paraíso tocantins">
+            <img src="imagens/logo-eco-descarte.png" alt="Eco Descarte">
+            <a class="logo-link" href="index.html"><h1>Eco Descarte</h1></a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">
+          ☰
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html#dicas">Dicas de Reciclagem</a></li>
+                <li><a href="index.html#lista-residuos">Lista de Resíduos</a></li>
+                <li><a href="local-descarte.html">Locais de Descarte</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li>
+                  <form id="search-form" class="search-form" onsubmit="return false;">
+                    <input type="text" id="search-input" placeholder="Buscar..." />
+                    <button type="submit">
+                      <img src="imagens/icone-busca.png" alt="Buscar" class="search-icon-img">
+                    </button>
+                  </form>
+                  <script src="search.js"></script>
+                
+                  <div id="search-results" class="search-results"></div>
+                </li>            
+            </ul>
+        </nav>
+        <script>
+          const menuToggle = document.getElementById('menu-toggle');
+          const navbar = document.getElementById('navbar').querySelector('ul');
+        
+          menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+          });
+        </script>
+    </header>
+
+    <section class="local" data-search="encontre local descartar resíduos horários coleta sustentável">
+        <div class="local-conteudo">
+            <h2>ENCONTRE O LOCAL CERTO<br>PARA DESCARTAR SEUS RESÍDUOS</h2>
+            <p><strong>Consulte os horários</strong> e pontos de coleta disponíveis na sua região e contribua para um futuro mais sustentável.</p>
+        </div>
+    </section>
+
+    <section class="local-descarte" data-search="locais de descarte pontos coleta">
+        <h3>LOCAIS DE DESCARTE</h3>
+    </section>
+
+    <section class="mapa" data-search="mapa locais coleta resíduos descartar reciclagem">
+      <h2>MAPA DOS LOCAIS DE COLETA</h2>
+      <p>Use CTRL + scroll para dar zoom no mapa</p>
+      <div id="map"></div>
+
+      <!-- Leaflet JS -->
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+      <script src="script-map.js"></script>
+    </section>
+
+    <section>
+        <div class="lista-descarte" data-search="pilhas baterias pneus eletrônicos descarte correto">
+            <nav>
+              <ul class="menu">
+                <li><a href="#" data-section="construction" class="active">PILHAS E BATERIAS</a></li>
+                <li><a href="#" data-section="legal"> PNEUS INSERVÍVEIS E ELETRÔNICOS</a></li>
+              </ul>
+            </nav>
+            <main id="main-lista-residuos">
+              <section id="content"></section>
+            </main>
+            <script src="script.js"></script>
+          </div>
+    </section>
+
+    <section class="horario-coleta" data-search="horários coleta setores bairros dias funcionamento">
+      <h3>HORÁRIOS DE COLETA</h3>
+    </section>
+
+    <section>
+      <div class="content">
+        <div class="setor1" data-search="centro interlagos transbrasiliana serrano bela vista oeste horários coleta">
+          <h2>CENTRO, INTERLAGOS, TRANSBRASILIANA, SERRANO I, SERRANO II, BELA VISTA E OESTE.</h2>
+          <p>Segunda à Sábado<br>04h às 12h</p>
+            
+          <h2>VALE DO ARAGUAIA</h2>
+          <p>Segunda, Terça, Quinta e Sábado<br>13h às 21h</p>
+    
+          <h2>JARDIM PAULISTA, MILENA, HOSPITAL REGIONAL E CONDOMÍNIO SANTA LÚCIA.</h2>
+          <p>Segunda à Sábado<br>13h às 21h</p>
+    
+          <h2>SETOR PARQUE DOS BURITIS</h2>
+          <p>Segunda, Quarta, Sexta e Sábado<br>04h às 12h</p>
+        </div>
+
+        <div class="setor2" data-search="auto paraíso pouso alegre santa clara jardim américa universitário nova esperança parque industrial ypês avenida 23 outubro vila chapadão horários coleta">
+          <h2>AUTO PARAÍSO LADO DIREITO, POUSO ALEGRE, SANTA CLARA E JARDIM AMÉRICA</h2>
+          <p>Segunda à Sábado<br>13h às 21h</p>
+
+          <h2>SETOR UNIVERSITÁRIO</h2>
+          <p>Terça, Quinta e Sábado<br>04h às 12h</p>
+
+          <h2>NOVA ESPERANÇA, PARQUE INDUSTRIAL, PARAÍSO DOS YPÊS E AV. 23 DE OUTUBRO</h2>
+          <p>Segunda à Sábado<br>13h às 21h</p>
+    
+          <h2>VILA CHAPADÃO</h2>
+          <p>Quarta e Sexta<br>13h às 21h</p>
+        </div>
+
+        <div class="setor-img">
+          <img src="imagens/foto-horario.jpg" alt="Foto de garrafas" width="480px"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="escola" data-search="escolas participantes coleta seletiva paraíso tocantins">
+        <h3>ESCOLAS PARTICIPANTES DA COLETA SELETIVA</h3>
+    </section>
+
+    <section class="escolas" data-search="creche escola municipal lista instituições educação coleta seletiva">
+        <p>
+            Creche Municipal Arco Íris <br>
+            Creche Municipal Aureny Siqueira Campos <br>
+            Creche Municipal Professora Maria do Carmo <br> 
+            Escola Municipal 23 de Outubro <br>
+            Escola Municipal Adélia Aguiar <br>
+            Escola Municipal Bernardo Sayão <br>
+            Escola Municipal Irmã Julita <br>
+            Escola Municipal Jardim Paulista
+        </p>
+        <p>
+            Escola Municipal José Ribeiro Torres <br>
+            Escola Municipal Luzia Tavares <br>
+            Escola Municipal Pedro Ludovico Teixeira <br>
+            Escola Municipal Pouso Alegre <br>
+            Escola Municipal Santa Rosa <br>
+            Escola Municipal Vereador José Odete <br>
+            Unirg
+        </p>
+    </section>
+
+    <footer id="contatos" data-search="ouvidoria contatos projeto eco descarte prefeitura apoio parceiros">
+        <div class="partners-container" aria-label="Seção de Parcerias">
+          <div class="partners-title">APOIO</div>
+          <div class="partners-grid">
+            <div class="partner-logo">
+              <a href="https://www.reciclanip.org.br/" target="_blank" rel="noopener">
+                <img src="imagens/logo-reciclanip.png" alt="reciclaNip">
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://paraiso.to.gov.br" target="_blank" rel="noopener">
+                <img src="imagens/logo-gov-pso.png" alt="Governo de Paraíso do Tocantins – Educação e Juventude">
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://www.ifto.edu.br/paraiso" target="_blank" rel="noopener">
+                <img src="imagens/logo-ifto.png" alt="IFTO – Campus Paraíso do Tocantins">
+              </a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://institutonaturavida.com.br/" target="_blank" rel="noopener">
+                <img src="imagens/logo-ina.png" alt="Instituto Natura Vida">
+              </a>
+            </div>
+          </div>
+
+          <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:40px;">
+  
+            <div style="flex:1; min-width:250px;">
+              <h3 style="font-size:20px; font-weight:bold; margin-bottom:15px; color:#000;">Ouvidoria</h3>
+              <p style="margin:8px 0;">
+                <a href="mailto:ouvidoria@paraiso.to.gov.br" style="color:#008000; text-decoration:none;">
+                  ✉️ ouvidoria@paraiso.to.gov.br
+                </a>
+              </p>
+              <p style="margin:8px 0;">
+                <a href="tel:+5563999997665" style="color:#008000; text-decoration:none;">
+                  📞 Telefone: (63) 99999-7665
+                </a>
+              </p>
+            </div>
+        
+            <div style="flex:1; min-width:200px; text-align:center;">
+              <a href="index.html">
+              <img src="imagens/logo-eco-descarte.png" alt="Logo do Projeto" style="max-width:180px; margin-bottom:10px;">
+              </a>
+            </div>
+        
+            <div style="flex:1; min-width:250px;">
+              <h3 style="font-size:20px; font-weight:bold; margin-bottom:15px; color:#000;">Contatos do Projeto</h3>
+              <p style="margin:8px 0;">
+                <a href="mailto:ecodescartepso@gmail.com" style="color:#008000; text-decoration:none;">
+                  ✉️ ecodescartepso@gmail.com
+                </a>
+              </p>
+              <p style="margin:8px 0;">
+                <a href="https://instagram.com/ecodescarte.pso" target="_blank" style="color:#008000; text-decoration:none;">
+                  📷 @ecodescarte.pso
+                </a>
+              </p>
+            </div>
+          </div>
+  
+          <div style="text-align:center; margin-top:20px; font-size:14px; color:#777;">
+            © 2025 Eco Descarte
+          </div>
+        </div>
+      </footer> 
+  
+  </body>
+</html>
